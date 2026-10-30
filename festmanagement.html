@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTSAV 2026</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(to right, #1515a5, #087bff);
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        /* Hide the radio buttons; labels act as navigation links. */
+        input[name="page"] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        nav {
+            background-color: #4935b8;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav label {
+            display: inline-block;
+            color: white;
+            margin: 8px 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav label:hover {
+            color: yellow;
+        }
+
+        /* Highlight the selected navigation item. */
+        #home:checked ~ nav label[for="home"],
+        #technical:checked ~ nav label[for="technical"],
+        #cultural:checked ~ nav label[for="cultural"],
+        #workshops:checked ~ nav label[for="workshops"],
+        #schedule:checked ~ nav label[for="schedule"],
+        #register:checked ~ nav label[for="register"] {
+            color: #ffeb3b;
+            text-decoration: underline;
+        }
+
+        .section {
+            display: none;
+            padding: 30px;
+        }
+
+        #home:checked ~ main #home-section,
+        #technical:checked ~ main #technical-section,
+        #cultural:checked ~ main #cultural-section,
+        #workshops:checked ~ main #workshops-section,
+        #schedule:checked ~ main #schedule-section,
+        #register:checked ~ main #register-section {
+            display: block;
+        }
+
+        h2 {
+            text-align: center;
+            color: #40358c;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-top: 5px solid #4035b5;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px #ccc;
+            width: 350px;
+            max-width: 100%;
+        }
+
+        .card h3 {
+            color: #40358c;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #3737ed, #087bff);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            color: white;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ffc107;
+            color: #222;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #ffda55;
+        }
+
+        form label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 7px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        form button {
+            margin-top: 18px;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 22px 12px;
+            }
+
+            nav {
+                padding: 10px;
+            }
+
+            nav label {
+                margin: 7px;
+            }
+
+            .section {
+                padding: 18px 12px;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Radio buttons control which section is visible. -->
+    <input type="radio" name="page" id="home" checked>
+    <input type="radio" name="page" id="technical">
+    <input type="radio" name="page" id="cultural">
+    <input type="radio" name="page" id="workshops">
+    <input type="radio" name="page" id="schedule">
+    <input type="radio" name="page" id="register">
+
+    <header>
+        <h1>UTSAV 2026</h1>
+        <p>Our College Annual Technical and Cultural Festival</p>
+        <h3>Learn • Compete • Celebrate</h3>
+    </header>
+
+    <nav>
+        <label for="home">Home</label>
+        <label for="technical">Technical</label>
+        <label for="cultural">Cultural</label>
+        <label for="workshops">Workshops</label>
+        <label for="schedule">Schedule</label>
+        <label for="register">Register</label>
+    </nav>
+
+    <main>
+        <section id="home-section" class="section">
+            <div class="hero">
+                <h2>Welcome to UTSAV 2026!</h2>
+                <p>Two days of innovation, creativity, talent and fun.</p>
+                <p>Date: 20–21 November 2026</p>
+                <label for="register" class="button">Register Now</label>
+            </div>
+        </section>
+
+        <section id="technical-section" class="section">
+            <h2>Technical Events</h2>
+            <div class="container">
+                <div class="card">
+                    <h3>Paper Presentation</h3>
+                    <p>Present innovative ideas and research in technology.</p>
+                    <p><b>Date:</b> 20 November</p>
+                    <p><b>Coordinator:</b> Rahul Kumar</p>
+                    <p><b>Venue:</b> Seminar Hall</p>
+                </div>
+
+                <div class="card">
+                    <h3>Coding Challenge</h3>
+                    <p>Test your programming and problem-solving skills.</p>
+                    <p><b>Date:</b> 20 November</p>
+                    <p><b>Coordinator:</b> Priya Sharma</p>
+                    <p><b>Venue:</b> Computer Lab</p>
+                </div>
+
+                <div class="card">
+                    <h3>Project Expo</h3>
+                    <p>Showcase your creative projects and prototypes.</p>
+                    <p><b>Date:</b> 21 November</p>
+                    <p><b>Coordinator:</b> Arjun Reddy</p>
+                    <p><b>Venue:</b> Main Block</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cultural-section" class="section">
+            <h2>Cultural Competitions</h2>
+            <div class="container">
+                <div class="card">
+                    <h3>Dance Competition</h3>
+                    <p>Show your talent through solo or group dance.</p>
+                    <p><b>Date:</b> 20 November</p>
+                </div>
+
+                <div class="card">
+                    <h3>Singing Competition</h3>
+                    <p>Showcase your voice and musical talent.</p>
+                    <p><b>Date:</b> 21 November</p>
+                </div>
+
+                <div class="card">
+                    <h3>Photography Contest</h3>
+                    <p>Capture creative moments through your camera.</p>
+                    <p><b>Date:</b> 21 November</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="workshops-section" class="section">
+            <h2>Workshops</h2>
+            <div class="container">
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>Learn to create websites using HTML and CSS.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Explore the basics of AI and machine learning.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule-section" class="section">
+            <h2>Event Schedule</h2>
+            <div class="container">
+                <div class="card">
+                    <h3>Day 1 - 20 November</h3>
+                    <p>9:00 AM - Inauguration</p>
+                    <p>10:00 AM - Technical Events</p>
+                    <p>2:00 PM - Cultural Events</p>
+                </div>
+
+                <div class="card">
+                    <h3>Day 2 - 21 November</h3>
+                    <p>9:00 AM - Workshops</p>
+                    <p>11:00 AM - Project Expo</p>
+                    <p>3:00 PM - Prize Distribution</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="register-section" class="section">
+            <h2>Register for UTSAV 2026</h2>
+            <div class="container">
+                <div class="card">
+                    <form action="#" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="event">Select Event:</label>
+                        <select id="event" name="event" required>
+                            <option value="">Choose an event</option>
+                            <option>Paper Presentation</option>
+                            <option>Coding Challenge</option>
+                            <option>Project Expo</option>
+                            <option>Dance Competition</option>
+                            <option>Singing Competition</option>
+                            <option>Photography Contest</option>
+                        </select>
+
+                        <button type="submit" class="button">Submit Registration</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 UTSAV - College Annual Festival</p>
+    </footer>
+
+</body>
+</html>

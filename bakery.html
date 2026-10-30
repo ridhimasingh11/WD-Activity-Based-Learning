@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sweet Crumbs Bakery</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lavender;
+            color: #493126;
+        }
+
+        header {
+            background-color: skyblue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: lavender;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: #493126;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #a33e25;
+        }
+
+        .banner {
+            background-color: skyblue;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .banner h2 {
+            font-size: 32px;
+            color: #713f35;
+        }
+
+        .banner p {
+            font-size: 18px;
+        }
+
+        .offer {
+            background-color: purple;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* CSS-only navigation */
+        .page-section {
+            display: none;
+            scroll-margin-top: 10px;
+        }
+
+        .page-section:target {
+            display: block;
+        }
+
+        /* Show Home when the page first opens (no section is selected). */
+        body:not(:has(.page-section:target)) #home {
+            display: block;
+        }
+
+        body:has(#contact:target) #page-footer {
+            display: block;
+        }
+
+        section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .item {
+            background-color: white;
+            width: 230px;
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #d9c4b8;
+        }
+
+        .item img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .item h3 {
+            color: #713f35;
+        }
+
+        .price {
+            color: #a33e25;
+            font-weight: bold;
+        }
+
+        .custom {
+            background-color: #fbe0ce;
+        }
+
+        .contact {
+            background-color: #713f35;
+            color: white;
+        }
+
+        footer {
+            background-color: #492820;
+            color: white;
+            text-align: center;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sweet Crumbs Bakery</h1>
+        <p>Freshly Baked Happiness in Every Bite!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#pastries">Pastries</a>
+        <a href="#cookies">Cookies</a>
+        <a href="#custom">Custom Cakes</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="page-section" id="home">
+        <div class="banner">
+            <h2>Welcome to Sweet Crumbs!</h2>
+            <p>Delicious cakes, yummy pastries and freshly baked cookies.</p>
+            <p>Made with love, served with sweetness!</p>
+        </div>
+
+        <div class="offer">
+            <h2>Seasonal Special Offer!</h2>
+            <p>Get 15% OFF on selected cakes this festive season!</p>
+        </div>
+    </div>
+
+    <section class="page-section" id="cakes">
+        <h2>Our Delicious Cakes</h2>
+
+        <div class="gallery">
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Chocolate cake">
+                <h3>Chocolate Cake</h3>
+                <p>Rich and creamy chocolate cake.</p>
+                <p class="price">₹600 / kg</p>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500" alt="Strawberry cake">
+                <h3>Strawberry Cake</h3>
+                <p>Sweet cake with strawberry cream.</p>
+                <p class="price">₹650 / kg</p>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500" alt="Birthday cake">
+                <h3>Birthday Cake</h3>
+                <p>A perfect treat for celebrations.</p>
+                <p class="price">₹750 / kg</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="pastries">
+        <h2>Fresh Pastries</h2>
+
+        <div class="gallery">
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500" alt="Cream pastry">
+                <h3>Cream Pastry</h3>
+                <p>Soft pastry with fresh cream.</p>
+                <p class="price">₹80 each</p>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500" alt="Sweet pastry">
+                <h3>Sweet Treat</h3>
+                <p>A delicious little dessert.</p>
+                <p class="price">₹90 each</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="cookies">
+        <h2>Cookies and Biscuits</h2>
+
+        <div class="gallery">
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500" alt="Chocolate chip cookies">
+                <h3>Chocolate Chip Cookies</h3>
+                <p>Crunchy cookies with chocolate chips.</p>
+                <p class="price">₹150 / pack</p>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500" alt="Assorted cookies">
+                <h3>Butter Cookies</h3>
+                <p>Classic, buttery and delicious.</p>
+                <p class="price">₹120 / pack</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section custom" id="custom">
+        <h2>Custom Cake Designs</h2>
+        <p>Make your special occasions memorable with our personalised cakes!</p>
+
+        <div class="gallery">
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=500" alt="Decorated celebration cake">
+                <h3>Designer Cakes</h3>
+                <p>Elegant cakes for weddings and parties.</p>
+                <p class="price">Starting at ₹1,000</p>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?w=500" alt="Decorated custom cake">
+                <h3>Theme Cakes</h3>
+                <p>Personalised designs for birthdays.</p>
+                <p class="price">Starting at ₹1,200</p>
+            </div>
+        </div>
+
+        <p>Contact us to discuss your design and place an order.</p>
+    </section>
+
+    <section>
+        <h2>Why Choose Us?</h2>
+        <p>Fresh Ingredients | Quality Products | Affordable Prices</p>
+        <p>Every product is prepared with care and love.</p>
+    </section>
+
+    <section class="page-section contact" id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Bakery:</strong> Sweet Crumbs Bakery</p>
+        <p><strong>Address:</strong> Main Road, Your City, Andhra Pradesh</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> sweetcrumbs@example.com</p>
+        <p><strong>Opening Hours:</strong> 9:00 AM – 9:00 PM</p>
+    </section>
+
+    <footer class="page-section" id="page-footer">
+        <p>&copy; 2026 Sweet Crumbs Bakery. All Rights Reserved.</p>
+    </footer>
+
+
+
+
+</body>
+</html>
